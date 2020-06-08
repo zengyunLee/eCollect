@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity implements ILoginView , View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mLoginBtn = findViewById(R.id.login_loginBtn);
+        mLoginBtn.setOnClickListener(this);
+
         mUsername = findViewById(R.id.login_userName);
         mPwd = findViewById(R.id.login_pwd);
-
     }
 
     @Override
