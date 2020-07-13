@@ -1,31 +1,48 @@
 package ok.feiyu.ecollect;
 
-public class LoginModel implements ILoginModel{
+import ok.feiyu.ecollect.network.bean.LoginBean;
 
-    public  String userName = "";
-    public  String pwd = "";
+public class LoginModel {
+    private LoginPresenter mPresenter;
+    private String userName = "";
+    private String pwd = "";
+    private String mailAddress = "";
+    private LoginBean loginBean = null;
 
-    public LoginModel() {
-
+    public LoginBean getLoginBean() {
+        return loginBean;
     }
 
-    @Override
-    public void onLogin() {
-
+    public void setLoginBean(LoginBean loginBean) {
+        this.loginBean = loginBean;
     }
 
-    @Override
-    public void onSendMail() {
-
+    public String getMailAddress() {
+        return mailAddress;
     }
 
-    @Override
-    public void onUserNameChange(String username) {
+    public void setMailAddress(String mailAddress) {
+        this.mailAddress = mailAddress;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    @Override
-    public void onPwdChange(String pwd) {
-        this.pwd = pwd;
+    public LoginModel(LoginPresenter lp) {
+        mPresenter = lp;
     }
+
 }

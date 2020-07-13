@@ -3,4 +3,8 @@
     <string name="login_userName">采集易</string>
     <string name="login_userName_placeHolder">请输入用户名</string>
     <string name="login_pwd_placeHolder">请输入密码</string>
+    <string name="tenant_list">租户列表"</string>
+    <string name="project_list">项目列表"</string>
+    <string name="site_list">中心列表"</string>
+
 </resources>
